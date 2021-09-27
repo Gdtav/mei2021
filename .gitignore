@@ -1,3 +1,7 @@
+## This Project's ignored files/folders
+data/
+bin/
+
 ## R
 
 # History files
