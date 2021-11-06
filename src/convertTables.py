@@ -1,10 +1,10 @@
 def main():
     sizes = [10, 20, 30, 40, 50]
-    probabilities = [0.05, 0.1, 0.25, 0.33, 0.5]
-    probabilitiesStr = ['0,05', '0,1', '0,25', '0,33', '0,5']
+    probabilities = [0.005, 0.01, 0.02, 0.025, 0.033]
+    probabilitiesStr = ['005', '01', '02', '025', '033']
     seeds=5
 
-    prob="qqq"
+    prob=""
     
     for c in range(2):
         for i in sizes:
@@ -14,16 +14,16 @@ def main():
                 f.write("solution runtime prob\n")
                 for line in lines:
                     if len(line.split(" "))==2:
-                        prob=line.split(" ")[1]
+                        prob=line.split(" ")[-1]
                     else:
                         f.write(line.strip("\n")+" "+prob)
 
     for c in range(2):
         for p in range(len(probabilities)):
-            with open("../data/code"+str(c+1)+"\\prob_"+probabilitiesStr[p]+".out","w") as fp:
+            with open("../data/code"+str(c+1)+"/prob_"+probabilitiesStr[p]+".out","w") as fp:
                 fp.write("solution runtime size\n")
                 for i in sizes:
-                    with open("../data/code"+str(c+1)+"\\size_"+str(i)+".out","r") as f:
+                    with open("../data/code"+str(c+1)+"/size_"+str(i)+".out","r") as f:
                         lines=f.readlines()
                         for j in range(seeds):
                             line=lines[p*seeds+1+j]

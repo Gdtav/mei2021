@@ -82,23 +82,23 @@ plotOverlappingHist(code2_size_50$runtime, code1_size_50$runtime, "relation betw
 
 #Scatter plot w/ regression lines
 lm1.out=lm(code1_size_10$runtime ~ code1_size_10$prob)
-#plot(lm1.out) #aqui vemos uns gráficos que não sei bem o quanto nos podem ajudar
-#summary(lm1.out)
+plot(lm1.out) #aqui vemos uns gráficos que não sei bem o quanto nos podem ajudar
+summary(lm1.out)
 lm1.out #aqui conseguimos perceber os valores da relação linear
 plot(code1_size_10$prob, code1_size_10$runtime)
 abline(lm1.out)
 
-lm2.out=lm(get('code1_prob_0,5')$runtime ~ get('code1_prob_0,5')$size)
+lm2.out=lm(get('code1_prob_033')$runtime ~ get('code1_prob_033')$size)
 #plot(lm2.out)
 #summary(lm2.out)
 lm2.out
-plot(get('code1_prob_0,5')$size, get('code1_prob_0,5')$runtime)
+plot(get('code1_prob_033')$size, get('code1_prob_033')$runtime)
 abline(lm2.out)
 
 #Boxplot 
 #para retornar os valores dos ficheiros de probabilidades tem que se usar o get('') dont ask me why
 #1- Comparar codes, com prob constante e size variado
-boxplot(get('code1_prob_0,05')$runtime, get('code2_prob_0,05')$runtime)
+boxplot(get('code1_prob_005')$runtime, get('code2_prob_005')$runtime)
 #2- Comparar codes, com size constante e prob variado
 boxplot(code1_size_10$runtime, code2_size_10$runtime)
 
