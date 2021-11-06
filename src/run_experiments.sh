@@ -5,11 +5,11 @@
 # third argument is the input filename
 for (( i=10; i <= 50; i+=10 ))
 do
-    for j in 0.05 0.1 0.25 0.33 0.5
+    for j in 0.05 0.1 0.2 0.25 0.33
     do
         echo "probability: $j" >> ../data/code1/size_$i.out
         echo "probability: $j" >> ../data/code2/size_$i.out
-        for (( k=1; k <= 5; k+=1 ))
+        for (( k=1; k <= 20; k+=1 ))
         do
             ../bin/code1 $(($i/5)) $1 ../data/input/$i-$j.in >> ../data/code1/size_$i.out &
             ../bin/code2 $(($i/5)) $1 ../data/input/$i-$j.in >> ../data/code2/size_$i.out &
