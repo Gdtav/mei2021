@@ -1,8 +1,8 @@
 def main():
     sizes = [10, 20, 30, 40, 50]
-    probabilities = [0.005, 0.01, 0.02, 0.025, 0.033]
-    probabilitiesStr = ['005', '01', '02', '025', '033']
-    seeds=5
+    probabilities = [0.05, 0.1, 0.2, 0.25, 0.33]
+    probabilitiesStr = ['05', '1', '2', '25', '33']
+    seeds=20
 
     prob=""
     

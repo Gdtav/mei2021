@@ -6,7 +6,7 @@
 sh gen_inputs.sh
 for (( i=10; i <= 50; i+=10 ))
 do
-    for j in 0.005 0.01 0.02 0.025 0.033
+    for j in 0.05 0.1 0.2 0.25 0.33
     do
         echo "probability: $j" >> ../data/code1/size_$i.out
         echo "probability: $j" >> ../data/code2/size_$i.out
