@@ -63,7 +63,7 @@ if __name__ == '__main__':
                 gen_inputs(i, j, seeded_number, "../data/input/" + str(i) + '-' + str(j)[2:] + ".in")
                 os.system("echo \"probability: {}\" >> ../data/code1/size_{}.out".format(j,i))
                 os.system("echo \"probability: {}\" >> ../data/code2/size_{}.out".format(j,i))
-                for k in range(1,6,1):
+                for k in range(1,21,1):
                     f1 = open("../data/code1/size_{}.out".format(i),"a")
                     f2 = open("../data/code2/size_{}.out".format(i),"a")
                     seeded_number = int(str(random.random())[2:])
